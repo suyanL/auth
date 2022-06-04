@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>谷歌ReCaptcha</title>
+    <script src="https://www.recaptcha.net/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeIV-MfAAAAADzUTOlJ0JQ41zV7uFvCoi_aPqiK"></script> -->
+</head>
+
+<body>
+    <!-- <button>点击我执行验证</button> -->
+<!--    <div class="g-recaptcha" data-sitekey="6LfEJucfAAAAAC9m1d_UW64zvuDZSuUzTKSglfvB"></div>-->
+    <form action="./v1/captcha/validate" method="GET">
+        <input type="email" name="email">
+        <input type="password" name="password">
+        <div class="g-recaptcha" data-sitekey="6LeEzuofAAAAAH126dJmXhBaOaAAfdfoKeIogUnZ"></div>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+
+</html>
