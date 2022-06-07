@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ddup-auth-captcha
+  cloud:
+    nacos:
+      server-addr: http://10.211.55.18:30848
+      username: nacos
+      password: nacos
+      config:
+        group: DEFAULT_GROUP
+        file-extension: yml
+        namespace: ddup-auth
+      discovery:
+        enabled: true
+        namespace: ddup-auth
+        group: DEFAULT_GROUP
