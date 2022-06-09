@@ -11,6 +11,9 @@
     <modules>
         <module>ddup-auth-captcha</module>
         <module>ddup-auth-service-base</module>
+        <module>ddup-auth-user</module>
+        <module>ddup-auth-service-api</module>
+        <module>ddup-auth-service</module>
     </modules>
 
     <parent>

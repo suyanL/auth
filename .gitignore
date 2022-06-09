@@ -1,3 +1,14 @@
 /.idea/
 /ddup-auth-captcha/ddup-auth-captcha.iml
 /ddup-auth-service-base/ddup-auth-service-base.iml
+/target/
+/*/target/
+/.flattened-pom.xml
+/ddup-auth-parent.iml
+/ddup-auth-service/ddup-auth-service-user/ddup-auth-service-user.iml
+/ddup-auth-service/ddup-auth-service-token/ddup-auth-service-token.iml
+*.iml
+/ddup-auth-service-base/.flattened-pom.xml
+/ddup-auth-captcha/.flattened-pom.xml
+/ddup-auth-service-api/ddup-auth-user-service-api/ddup-auth-user-service-api.iml
+/ddup-auth-service-base/target/
