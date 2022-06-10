@@ -12,3 +12,5 @@
 /ddup-auth-captcha/.flattened-pom.xml
 /ddup-auth-service-api/ddup-auth-user-service-api/ddup-auth-user-service-api.iml
 /ddup-auth-service-base/target/
+/ddup-auth-service/ddup-auth-service-user/target/
+/ddup-auth-service-api/ddup-auth-user-service-api/target/

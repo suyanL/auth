@@ -5,7 +5,7 @@
     <parent>
         <artifactId>ddup-auth-service</artifactId>
         <groupId>com.ddup.auth</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,5 +15,13 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ddup.auth</groupId>
+            <artifactId>ddup-auth-user-service-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
 
 </project>

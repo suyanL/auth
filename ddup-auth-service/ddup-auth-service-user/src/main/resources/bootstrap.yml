@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ddup-auth-user
+  cloud:
+    nacos:
+      server-addr: http://10.211.55.18:30848
+      username: nacos
+      password: nacos
+      config:
+        group: DEFAULT_GROUP
+        file-extension: yml
+        namespace: 3a8a72a7-660d-4061-bf38-e57fafe7f383
+      discovery:
+        enabled: true
+        namespace: 3a8a72a7-660d-4061-bf38-e57fafe7f383
+        group: DEFAULT_GROUP
