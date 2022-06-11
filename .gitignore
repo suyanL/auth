@@ -3,6 +3,7 @@
 /ddup-auth-service-base/ddup-auth-service-base.iml
 /target/
 /*/target/
+/*/*/target/
 /.flattened-pom.xml
 /ddup-auth-parent.iml
 /ddup-auth-service/ddup-auth-service-user/ddup-auth-service-user.iml
@@ -14,3 +15,4 @@
 /ddup-auth-service-base/target/
 /ddup-auth-service/ddup-auth-service-user/target/
 /ddup-auth-service-api/ddup-auth-user-service-api/target/
+/ddup-auth-service/ddup-auth-service-captcha/target/

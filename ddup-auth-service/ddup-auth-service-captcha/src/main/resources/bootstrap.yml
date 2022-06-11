@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ddup-auth-service-user
+    name: ddup-auth-service-captcha
   cloud:
     nacos:
       server-addr: http://10.211.55.18:30848

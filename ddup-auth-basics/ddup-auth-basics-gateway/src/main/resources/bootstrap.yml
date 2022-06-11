@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ddup-auth-service-user
+    name: ddup-auth-basics-gateway
   cloud:
     nacos:
       server-addr: http://10.211.55.18:30848
@@ -14,3 +14,4 @@ spring:
         enabled: true
         namespace: ddup-auth
         group: DEFAULT_GROUP
+dubbo:

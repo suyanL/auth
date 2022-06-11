@@ -11,7 +11,7 @@ import org.apache.dubbo.config.annotation.DubboService;
 public class UserInfoService implements IUserInfoService {
     @Override
     public UserDto getUserByUserName(String userName) {
-        return UserDto.builder().userName(userName).email("suyanl728@183.com").phone("17639853212").status("0").password("000000").build();
+        return UserDto.builder().id(1).userName(userName).email("suyanl728@183.com").phone("17639853212").status("0").password("000000").build();
     }
 
     @Override
