@@ -3,7 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-build</artifactId>
+        <version>2.3.1.RELEASE</version>
+        <relativePath/>
+    </parent>
     <groupId>com.ddup.auth</groupId>
     <artifactId>ddup-auth-parent</artifactId>
     <packaging>pom</packaging>
@@ -11,19 +16,10 @@
     <modules>
         <module>ddup-auth-captcha</module>
         <module>ddup-auth-service-base</module>
-        <module>ddup-auth-user</module>
         <module>ddup-auth-service-api</module>
         <module>ddup-auth-service</module>
         <module>ddup-auth-basics</module>
     </modules>
-
-    <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-build</artifactId>
-        <version>2.3.1.RELEASE</version>
-        <relativePath/>
-    </parent>
-
     <properties>
         <!-- Project revision -->
         <revision>1.0.0-SNAPSHOT</revision>

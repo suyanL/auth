@@ -1,0 +1,57 @@
+#部署Pod的副本数，即运行多少个容器
+replicaCount: 1
+#容器镜像配置
+image:
+  repository: 10.211.55.19:30002/ddup/demo
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart version.
+  tag: "dev"
+#镜像仓库访问凭证
+imagePullSecrets:
+  - name: aliyun-registry-secret
+#覆盖启动容器名称
+nameOverride: ""
+fullnameOverride: ""
+#容器的端口暴露及环境变量配置
+container:
+  port: 18002
+  env: []
+#ServiceAccount，默认不创建
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+# fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+# runAsUser: 1000
+#使用NodePort的service，默认为ClusterIp
+service:
+  type: NodePort
+  port: 18002
+#外部访问Ingress配置，需要配置hosts部分
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: demo.com
+      paths: ["/demo"]
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+  #.... 省略了其它默认参数配置
