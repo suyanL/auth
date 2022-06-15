@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ddup-auth-service-captcha-svc
+  labels:
+    app: ddup-auth-service-captcha-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 18002
+      name: jenkinks-service
+      targetPort: 18002
+      nodePort: 32002
+      protocol: TCP
+  selector:
+    app: captcha

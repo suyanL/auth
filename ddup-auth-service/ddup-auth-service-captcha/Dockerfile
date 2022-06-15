@@ -4,20 +4,11 @@ FROM arm64v8/openjdk:8-jdk-oracle
 WORKDIR /
 # 维护着信息
 MAINTAINER suancyg
-#在build镜像时可以通过 --build-args profile=xxx 进行修改
-ARG profile
-ARG port
-ARG version
-ARG project
-ENV SPRING_PROFILES_ACTIVE=${profile}
-#项目的端口
-EXPOSE ${port}
-WORKDIR /mnt
-
-# 设置时区
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ENV LC_ALL "zh_CN.UTF-8"
-
-COPY ./target/your-project-name-1.0-SNAPSHOT.jar ./app.jar
-ENTRYPOINT ["java", "-jar", "/mnt/app.jar"]
+# 将系统编码设置为c.utf-8，默认的POSIX不支持中文
+ENV LANG C.UTF-8
+ENV LANGUAGE C.UTF-8
+ENV LC_ALL C.UTF-8
+# 将子项目打包的jar包拷贝到项目根目录
+COPY target/ddup-auth-service-captcha-1.0.0-SNAPSHOT.jar /ddup-auth-service-captcha.jar
+# 设置容器启动时执行的命令,-Dfile.encoding=utf-8
+CMD ["java", "-jar", "jenkins.jar"]

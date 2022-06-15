@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ddup-auth-service-captcha-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ddup-auth-service-captcha
+  template:
+    metadata:
+      labels:
+        name: ddup-auth-service-captcha
+        app: captcha
+    spec:
+      containers:
+        - name: ddup-auth-service-captcha
+          image: 10.211.55.19:30002/ddup/ddup-auth-service-captcha:$JENKINS_VERSION
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 18002
