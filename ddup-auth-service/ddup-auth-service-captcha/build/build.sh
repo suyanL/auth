@@ -1,4 +1,4 @@
-export JENKINS_HOME="/var/jenkins_home/workspace/ddup-auth/ddup-auth-service-captcha"
+export JENKINS_HOME="/var/jenkins_home/workspace/ddup-auth/ddup-auth-service-captcha-mvn/ddup-auth-service/ddup-auth-service-captcha"
 export JENKINS_VERSION="v0.1"
 
 echo "JENKINS_HOME:${JENKINS_HOME},JENKINS_VERSION:${JENKINS_VERSION}"
